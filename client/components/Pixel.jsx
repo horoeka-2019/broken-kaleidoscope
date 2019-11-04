@@ -12,10 +12,19 @@ class Pixel extends React.Component {
     }
   }
 
+  changeColor = () => {
+    this.setState({
+      style: {
+        backgroundColor: this.randomHexColor()
+      }
+    })
+  }
+
   render () {
     return (
       <React.Fragment>
-        <div style={this.state.style}>
+        <div style={this.state.style} onClick={this.changeColor}>
+
         </div>
       </React.Fragment>
     )
