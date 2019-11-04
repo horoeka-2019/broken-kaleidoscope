@@ -11,10 +11,22 @@ class Pixel extends React.Component {
       backgroundColor: randomHexColor()
     }
   }
+
+  clickHandler = (event) => {
+    // event.preventDefault()
+    this.setState({
+      style: {
+        height: 100,
+        width: 100,
+        backgroundColor: 'salmon'
+      }
+    })
+  }
+
   render () {
     return (
       <>
-        <div style={this.state.style}className="emptyPixel"></div>
+        <div style={this.state.style}className="emptyPixel" onClick={this.clickHandler}></div>
       </>
     )
   }
