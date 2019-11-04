@@ -23,10 +23,54 @@ class Pixel extends React.Component {
     })
   }
 
+  mouseEnter = (event) => {
+    // event.preventDefault()
+    this.setState({
+      style: {
+        height: 100,
+        width: 100,
+        backgroundColor: 'olive'
+      }
+    })
+  }
+
+  rightClick = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: {
+        height: 100,
+        width: 100,
+        backgroundColor: 'grey'
+      }
+    })
+  }
+
+  doubleClick = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: {
+        height: 100,
+        width: 100,
+        backgroundColor: 'white'
+      }
+    })
+  }
+
+  dragEnter = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: {
+        height: 100,
+        width: 100,
+        backgroundColor: 'yellow'
+      }
+    })
+  }
+
   render () {
     return (
       <>
-        <div style={this.state.style}className="emptyPixel" onClick={this.clickHandler}></div>
+        <div style={this.state.style}className="emptyPixel" onClick={this.clickHandler} onMouseEnter={this.mouseEnter} onContextMenu={this.rightClick} onDoubleClick={this.doubleClick} onDragEnter={this.dragEnter}> </div>
       </>
     )
   }
