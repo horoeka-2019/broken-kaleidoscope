@@ -15,7 +15,53 @@ class Pixel extends React.Component {
   changeColor = () => {
     this.setState({
       style: {
+        height: '100px',
+        width: '100px',
         backgroundColor: this.randomHexColor()
+      }
+    })
+  }
+
+  turnGreen = () => {
+    this.setState({
+      style: {
+        height: '100px',
+        width: '100px',
+        backgroundColor: 'green'
+      }
+    })
+  }
+
+  turnBlack = (evt) => {
+    evt.preventDefault()
+
+    this.setState({
+      style: {
+        height: '100px',
+        width: '100px',
+        backgroundColor: 'black'
+      }
+    })
+  }
+
+  turnWhite = () => {
+    this.setState({
+      style: {
+        height: '100px',
+        width: '100px',
+        backgroundColor: 'white'
+      }
+    })
+  }
+
+  turnYellow = () => {
+    // evt.preventDefault()
+
+    this.setState({
+      style: {
+        height: '100px',
+        width: '100px',
+        backgroundColor: 'yellow'
       }
     })
   }
@@ -23,7 +69,7 @@ class Pixel extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div style={this.state.style} onClick={this.changeColor}>
+        <div style={this.state.style} onMouseEnter={this.turnGreen} onContextMenu={this.turnBlack} onDoubleClick={this.turnWhite} onDragEnter={this.turnYellow}>
 
         </div>
       </React.Fragment>
