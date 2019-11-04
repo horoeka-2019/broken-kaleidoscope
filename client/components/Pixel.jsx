@@ -6,8 +6,8 @@ class Pixel extends React.Component {
 
   state = {
     style: {
-      height: '3px',
-      width: '3px',
+      height: '10px',
+      width: '10px',
       backgroundColor: this.randomHexColor()
     }
   }
@@ -15,8 +15,8 @@ class Pixel extends React.Component {
   changeColor = () => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '10px',
+        width: '10px',
         backgroundColor: this.randomHexColor()
       }
     })
@@ -25,8 +25,8 @@ class Pixel extends React.Component {
   turnGreen = () => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'green'
       }
     })
@@ -37,8 +37,8 @@ class Pixel extends React.Component {
 
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'black'
       }
     })
@@ -47,20 +47,18 @@ class Pixel extends React.Component {
   turnWhite = () => {
     this.setState({
       style: {
-        height: '3px',
-        width: '3px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'white'
       }
     })
   }
 
   turnYellow = () => {
-    // evt.preventDefault()
-
     this.setState({
       style: {
-        height: '100px',
-        width: '100px',
+        height: '10px',
+        width: '10px',
         backgroundColor: 'yellow'
       }
     })
@@ -69,7 +67,7 @@ class Pixel extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div style={this.state.style} onMouseEnter={this.turnGreen} onContextMenu={this.turnBlack} onDoubleClick={this.turnWhite} onDragEnter={this.turnYellow}>
+        <div style={this.state.style} onClick={this.changeColor} onMouseEnter={this.turnGreen} onContextMenu={this.turnBlack} onDoubleClick={this.turnWhite} onDragEnter={this.turnYellow}>
 
         </div>
       </React.Fragment>
