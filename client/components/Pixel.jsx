@@ -4,7 +4,11 @@ class Pixel extends React.Component {
   render () {
     return (
       <>
-        <div className="emptyPixel"></div>
+        <div style={{
+          height: 100,
+          width: 100,
+          backgroundColor: 'salmon'
+        }}className="emptyPixel"></div>
       </>
     )
   }
