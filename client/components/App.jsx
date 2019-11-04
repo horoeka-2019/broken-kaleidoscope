@@ -4,38 +4,7 @@ import Pixel from './Pixel'
 const App = () => {
   return (
     <>
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
-    <Pixel />
+      {Array.from({ length: 1000 }, () => <Pixel />)}
     </>
   )
 }
