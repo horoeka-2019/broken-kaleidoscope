@@ -1,12 +1,10 @@
 import React from 'react'
 
-const Pixel = () => {
+const Pixel = (props) => {
   return (
-    <div>
-      
+    <div style={props.style}>
     </div>
   )
 }
 
-export default Pixel 
-
+export default Pixel
