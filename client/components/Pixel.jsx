@@ -6,8 +6,8 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
   state = {
     style: {
-      height: 100,
-      width: 100,
+      height: 10,
+      width: 10,
       backgroundColor: randomHexColor()
     }
   }
@@ -16,8 +16,8 @@ class Pixel extends React.Component {
     // event.preventDefault()
     this.setState({
       style: {
-        height: 100,
-        width: 100,
+        height: 10,
+        width: 10,
         backgroundColor: 'salmon'
       }
     })
@@ -27,8 +27,8 @@ class Pixel extends React.Component {
     // event.preventDefault()
     this.setState({
       style: {
-        height: 100,
-        width: 100,
+        height: 10,
+        width: 10,
         backgroundColor: 'olive'
       }
     })
@@ -38,8 +38,8 @@ class Pixel extends React.Component {
     event.preventDefault()
     this.setState({
       style: {
-        height: 100,
-        width: 100,
+        height: 10,
+        width: 10,
         backgroundColor: 'grey'
       }
     })
@@ -49,8 +49,8 @@ class Pixel extends React.Component {
     event.preventDefault()
     this.setState({
       style: {
-        height: 100,
-        width: 100,
+        height: 10,
+        width: 10,
         backgroundColor: 'white'
       }
     })
@@ -60,8 +60,8 @@ class Pixel extends React.Component {
     event.preventDefault()
     this.setState({
       style: {
-        height: 100,
-        width: 100,
+        height: 10,
+        width: 10,
         backgroundColor: 'yellow'
       }
     })
