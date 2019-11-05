@@ -6,8 +6,8 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
   state = {
     style: {
-      height: '50px',
-      width: '50px',
+      height: '3px',
+      width: '3px',
       backgroundColor: randomHexColor()
     },
     potato: 'sasha'
@@ -16,8 +16,8 @@ class Pixel extends React.Component {
   clickHandler = () => {
     this.setState({
       style: {
-        height: '50px',
-        width: '50px',
+        height: '3px',
+        width: '3px',
         backgroundColor: randomHexColor()
       }
     })
@@ -27,8 +27,8 @@ class Pixel extends React.Component {
     // Turns components green when mouse hovers over them
     this.setState({
       style: {
-        height: '50px',
-        width: '50px',
+        height: '3px',
+        width: '3px',
         backgroundColor: 'green'
       }
     })
@@ -38,32 +38,36 @@ class Pixel extends React.Component {
     evt.preventDefault()
     this.setState({
       style: {
-        height: '50px',
-        width: '50px',
+        height: '3px',
+        width: '3px',
         backgroundColor: 'black'
       }
     })
   }
-  
+
   onDoubleClickHandler = () => {
     this.setState({
       style: {
-        height: '50px',
-        width: '50px',
+        height: '3px',
+        width: '3px',
         backgroundColor: 'white'
       }
     })
   }
 
-  onDragEnterHandler = () =>{
+  onDragEnterHandler = () => {
     this.setState({
       style: {
-        height: '50px',
-        width: '50px',
+        height: '3px',
+        width: '3px',
         backgroundColor: 'yellow'
       }
     })
-  } 
+  }
+
+  componentDidMount () {
+    setInterval(this.clickHandler, Math.random() * 1000 + 1000)
+  }
 
   render () {
     return (
