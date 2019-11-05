@@ -1,5 +1,7 @@
 import React from 'react'
 
+// const setInterval = (() => randomHexColor(), 1000)
+
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
@@ -8,6 +10,24 @@ class Pixel extends React.Component {
     super(props)
     // this.randomHexColor()
     this.state = { style: { height: '60px', width: '60px', backgroundColor: randomHexColor() } }
+  }
+
+  componentDidMount () {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    )
+  }
+
+  componentWillUnmount () {
+    clearInterval(this.timerID)
+  }
+
+  tick () {
+    this.setState({
+      date: new Date(),
+      style: { height: '60px', width: '60px', backgroundColor: randomHexColor() }
+    })
   }
 
   changeColor = (event) => {
@@ -51,8 +71,6 @@ class Pixel extends React.Component {
       </div>
     )
   }
-
-
- }
+}
 
 export default Pixel
