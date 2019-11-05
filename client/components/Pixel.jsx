@@ -4,8 +4,8 @@ class Pixel extends React.Component {
   state = {
     style: {
       backgroundColor: 'black',
-      height: 45,
-      width: 45
+      height: 12,
+      width: 12
     }
   }
 
@@ -14,8 +14,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: randomHexColor(),
-        height: 45,
-        width: 45
+        height: 12,
+        width: 12
       } })
   }
 
