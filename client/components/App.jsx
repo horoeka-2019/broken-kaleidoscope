@@ -3,7 +3,9 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <div >React development has begun!
+
+    Array.from({ length: 100 }, () => <Pixel />)
+  /* <Pixel />
       <Pixel />
       <Pixel />
       <Pixel />
@@ -12,9 +14,8 @@ const App = () => {
       <Pixel />
       <Pixel />
       <Pixel />
-      <Pixel />
-      <Pixel />
-    </div>
+      <Pixel /> */
+
   )
 }
 
