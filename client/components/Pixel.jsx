@@ -3,9 +3,9 @@ import React from 'react'
 class Pixel extends React.Component {
   state = {
     style: {
-      backgroundColor: 'white',
-      height: 12,
-      width: 12
+      backgroundColor: 'grey',
+      height: 30,
+      width: 30
     }
   }
 
@@ -14,8 +14,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: randomHexColor(),
-        height: 12,
-        width: 12
+        height: 30,
+        width: 30
       } })
   }
 
@@ -23,8 +23,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'green',
-        height: 12,
-        width: 12
+        height: 30,
+        width: 30
       } })
   }
 
@@ -32,15 +32,35 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'black',
-        height: 12,
-        width: 12
+        height: 30,
+        width: 30
       } })
   }
+
+  changeWhite = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'white',
+        height: 30,
+        width: 30
+      } })
+  }
+
+  changeYellow = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'yellow',
+        height: 30,
+        width: 30
+      } })
+  }
+
+  recolorTimer = setInterval(this.changeColor, 0.001)
 
   render () {
     return (
       <>
-      <div style={this.state.style} onClick={this.changeColor} onMouseOver={this.changeGreen} onContextMenu={this.changeBlack}>
+      <div style={this.state.style} onClick={this.changeColor} onMouseEnter={this.changeGreen} onContextMenu={this.changeBlack} onDoubleClick={this.changeWhite} onDragEnter={this.changeYellow}>
       </div>
       </>)
   }
