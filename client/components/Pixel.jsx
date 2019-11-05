@@ -6,15 +6,25 @@ const randomHexColor = () =>
 class Pixel extends React.Component {
   state = {
     style: {
-      ontFamily: 'Time New Roman',
       height: '50px',
       width: '50px',
-      backgroundColor: randomHexColor() }
+      backgroundColor: randomHexColor()
+    }
+  }
+
+  clickHandler = () => {
+    this.setState({
+      style: {
+        height: '50px',
+        width: '50px',
+        backgroundColor: randomHexColor()
+      }
+    })
   }
 
   render () {
     return (
-      <div style={this.state.style}></div>
+      <div style={this.state.style} onClick={this.clickHandler}></div>
     )
   }
 }
