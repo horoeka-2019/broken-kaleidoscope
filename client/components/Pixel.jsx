@@ -17,12 +17,42 @@ class Pixel extends React.Component {
     })
   }
 
+  onDoubleClick= (event) => {
+    event.preventDefault()
+    this.setState({
+      style: { height: '60px', width: '60px', backgroundColor: 'white' }
+    })
+  }
+
+  onMouseEnter = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: { height: '60px', width: '60px', backgroundColor: 'green' }
+    })
+  }
+
+  onContextMenu = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: { height: '60px', width: '60px', backgroundColor: 'black' }
+    })
+  }
+
+  onDragEnter = (event) => {
+    event.preventDefault()
+    this.setState({
+      style: { height: '60px', width: '60px', backgroundColor: 'yellow' }
+    })
+  }
+
   render () {
     return (
-      <div style={this.state.style} onClick={this.changeColor}>
+      <div style={this.state.style} onClick={this.changeColor} onDoubleClick={this.onDoubleClick} onMouseEnter={this.onMouseEnter} onContextMenu={this.onContextMenu} onDragEnter={this.onDragEnter}>
       </div>
     )
   }
-}
+
+
+ }
 
 export default Pixel
