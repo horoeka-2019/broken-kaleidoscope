@@ -44,10 +44,30 @@ class Pixel extends React.Component {
       }
     })
   }
+  
+  onDoubleClickHandler = () => {
+    this.setState({
+      style: {
+        height: '50px',
+        width: '50px',
+        backgroundColor: 'white'
+      }
+    })
+  }
+
+  onDragEnterHandler = () =>{
+    this.setState({
+      style: {
+        height: '50px',
+        width: '50px',
+        backgroundColor: 'yellow'
+      }
+    })
+  } 
 
   render () {
     return (
-      <div style={this.state.style} onClick={this.clickHandler} onMouseEnter={this.onMouseEnterHandler} onContextMenu={this.onContextMenu}></div>
+      <div style={this.state.style} onClick={this.clickHandler} onMouseEnter={this.onMouseEnterHandler} onContextMenu={this.onContextMenu} onDoubleClick={this.onDoubleClickHandler} onDragEnter={this.onDragEnterHandler}></div>
     )
   }
 }
