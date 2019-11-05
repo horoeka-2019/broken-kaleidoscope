@@ -9,7 +9,8 @@ class Pixel extends React.Component {
       height: '50px',
       width: '50px',
       backgroundColor: randomHexColor()
-    }
+    },
+    potato: 'sasha'
   }
 
   clickHandler = () => {
@@ -22,9 +23,20 @@ class Pixel extends React.Component {
     })
   }
 
+  onMouseEnterHandler = () => {
+    // Turns components green when mouse hovers over them
+    this.setState({
+      style: {
+        height: '50px',
+        width: '50px',
+        backgroundColor: 'green'
+      }
+    })
+  }
+
   render () {
     return (
-      <div style={this.state.style} onClick={this.clickHandler}></div>
+      <div style={this.state.style} onClick={this.clickHandler} onMouseEnter={this.onMouseEnterHandler}></div>
     )
   }
 }
