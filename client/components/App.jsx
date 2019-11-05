@@ -4,9 +4,7 @@ import Pixel from './Pixel'
 const App = () => {
   return (
     <React.Fragment>
-      {Array(100).fill(0).map((ele, i) => (
-        <Pixel key={i}/>
-      ))}
+      {Array.from({ length: 1000 }, (v, i) => <Pixel key={i}/>)}
     </React.Fragment>
   )
 }
