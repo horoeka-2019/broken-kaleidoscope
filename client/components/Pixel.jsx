@@ -3,7 +3,7 @@ import React from 'react'
 class Pixel extends React.Component {
   state = {
     style: {
-      backgroundColor: 'black',
+      backgroundColor: 'white',
       height: 12,
       width: 12
     }
@@ -19,10 +19,28 @@ class Pixel extends React.Component {
       } })
   }
 
+  changeGreen = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'green',
+        height: 12,
+        width: 12
+      } })
+  }
+
+  changeBlack = () => {
+    this.setState({
+      style: {
+        backgroundColor: 'black',
+        height: 12,
+        width: 12
+      } })
+  }
+
   render () {
     return (
       <>
-      <div style={this.state.style} onMouseOver={this.changeColor}>
+      <div style={this.state.style} onClick={this.changeColor} onMouseOver={this.changeGreen} onContextMenu={this.changeBlack}>
       </div>
       </>)
   }
