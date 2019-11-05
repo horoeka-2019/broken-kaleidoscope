@@ -1,14 +1,18 @@
 import React from 'react'
 
 class Pixel extends React.Component {
+  state = {
+    style: {
+      height: 50,
+      width: 50,
+      backgroundColor: 'cornflowerblue'
+    }
+  }
+
   render () {
     return (
       <React.Fragment>
-        <div style={{
-          height: '50px',
-          width: '50px',
-          backgroundColor: 'cornflowerblue'
-        }}>  </div>
+        {this.state.style}
       </React.Fragment>
     )
   }
